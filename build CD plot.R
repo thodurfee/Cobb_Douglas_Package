@@ -1,4 +1,4 @@
-## version 8.31.15:12:22
+## version 9.2.15.a
 
 #graphing the Cobb Douglas Table
 

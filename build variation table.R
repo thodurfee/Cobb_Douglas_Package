@@ -1,13 +1,8 @@
-#version 8.31.15:4:00
+#version 9.2.15.a
 #add compensating and equivalent variation to an existing plot space
 
-set <- test_set
 
-class(goods[1])
 
-set <- test_set
-dp1 <- 1
-dp2 <- 2
 
 calculate_variation <- function(set, dp1, dp2){
 
@@ -21,7 +16,7 @@ calculate_variation <- function(set, dp1, dp2){
                                   u = as.numeric(set$sig_values["util"]),
                                   a1 = as.numeric(set$sig_values["a1"]),
                                   a2 = as.numeric(set$sig_values["a2"]),
-                                  b = b,
+                                  b = as.numeric(set$sig_values["b"]),
                                   method = "hicks",
                                   x1_name = goods[1],
                                   x2_name = goods[2])
@@ -58,7 +53,7 @@ calculate_variation <- function(set, dp1, dp2){
                      u = as.numeric(set$sig_values["util"]),
                      a1 = as.numeric(set$sig_values["a1"]),
                      a2 = as.numeric(set$sig_values["a2"]),
-                     b = b,
+                     b = as.numeric(set$sig_values["b"]),
                      method = "h",
                      x1_name = as.character(goods[1]),
                      x2_name = as.character(goods[2]))
@@ -77,7 +72,7 @@ calculate_variation <- function(set, dp1, dp2){
                      u = as.numeric(e0$sig_values["util"]),
                      a1 = as.numeric(e0$sig_values["a1"]),
                      a2 = as.numeric(e0$sig_values["a2"]),
-                     b = b,
+                     b = as.numeric(set$sig_values["b"]),
                      method = "h",
                      x1_name = as.character(goods[1]),
                      x2_name = as.character(goods[2]))
@@ -95,7 +90,7 @@ calculate_variation <- function(set, dp1, dp2){
                      u = as.numeric(set$sig_values["util"]),
                      a1 = as.numeric(set$sig_values["a1"]),
                      a2 = as.numeric(set$sig_values["a2"]),
-                     b = b,
+                     b = as.numeric(set$sig_values["b"]),
                      method = "h",
                      x1_name = as.character(goods[1]),
                      x2_name = as.character(goods[2]))
@@ -113,7 +108,7 @@ calculate_variation <- function(set, dp1, dp2){
                      u = as.numeric(e0$sig_values["util"]),
                      a1 = as.numeric(set$sig_values["a1"]),
                      a2 = as.numeric(set$sig_values["a2"]),
-                     b = b,
+                     b = as.numeric(set$sig_values["b"]),
                      method = "h",
                      x1_name = as.character(goods[1]),
                      x2_name = as.character(goods[2]))
@@ -131,7 +126,7 @@ calculate_variation <- function(set, dp1, dp2){
                      u = as.numeric(set$sig_values["util"]),
                      a1 = as.numeric(set$sig_values["a1"]),
                      a2 = as.numeric(set$sig_values["a2"]),
-                     b = b,
+                     b = as.numeric(set$sig_values["b"]),
                      method = "h",
                      x1_name = as.character(goods[1]),
                      x2_name = as.character(goods[2]))
@@ -162,8 +157,8 @@ calculate_variation <- function(set, dp1, dp2){
 
 
 var_test <- calculate_variation(set = test_set
-                    , dp1 = 2
-                    , dp2 = 4)
+                                , dp1 = 2
+                                , dp2 = 4)
 
 
 

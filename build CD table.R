@@ -1,17 +1,17 @@
-#version = 8.31.15:12:08
+#version = 9.2.15.a
 
-
-x1_name <- "red"
-x2_name <- "blue"
-a1 <- .6
-a2 <- .4
-b <- 1.5
-p1 <- 1
-p2 <- 2
-u <- 10
-w <- 100
-method <- "m"
-
+#
+# x1_name <- "red"
+# x2_name <- "blue"
+# a1 <- .6
+# a2 <- .4
+# b <- 1.5
+# p1 <- 1
+# p2 <- 2
+# u <- 10
+# w <- 100
+# method <- "m"
+#
 
 
 Cobb_Douglas <- function(  x1_name
