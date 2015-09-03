@@ -133,56 +133,56 @@ plot_variation <- function(var_table, var_pallete, base_plot){
 
   most_recent_layer
 
-  #
-  #
-  # add_layer <- function(inner_set, var_pallete){
-  #
-  #   most_recent_layer <- most_recent_layer + geom_line(data = as.data.frame(subset(inner_set$data, curve == "wealth"))
-  #                                                      , aes(   x =  x1_star
-  #                                                               , y =  x2_star
-  #                                                               )
-  #                                                      , color = var_pallete$wealth_color
-  #                                                      , linetype = as.character(var_pallete$wealth_style)
-  #                                                      , size = as.numeric(var_pallete$wealth_thick)
-  #                                                      , lineend = "round"
-  #                                                      , add = TRUE
-  #                                        ) + geom_point(
-  #                                                        data = inner_set$sig_values
-  #                                                        , aes(  x = x1_star
-  #                                                                , y = x2_star
-  #                                                                )
-  #                                                        , size = as.numeric(var_pallete$x_star_size)
-  #                                                        , shape = as.numeric(var_pallete$x_star_style)
-  #                                                        , color = var_pallete$x_star_color
-  #                                                        , add = TRUE
-  #                                        ) + geom_line(
-  #                                          data = as.data.frame(subset(inner_set$data, curve == "utility"))
-  #                                          , color = var_pallete$utility_color
-  #                                          , aes(   x =  x1_star
-  #                                                   , y =  x2_star
-  #                                                   )
-  #                                          , linetype = as.character( var_pallete$utility_style)
-  #                                          , size = var_pallete$utility_thick
-  #                                          , add = TRUE
-  #                                          ) + xlim(0,1000)
-  #
-  #   return(most_recent_layer)
-  #
-  # }
-  #
-  # j <- 5
-  #
-  #
-  #
-  #
-  #
-  # for(j in 1:5){
-  #   add_layer(  inner_set = new_set[[j]]
-  #             , var_pallete = extedned_var_scheme[[j]][[1]]
-  #             )
-  # }
-  #
-  # most_recent_layer + xlim(0,1000)
+
+
+  add_layer <- function(inner_set, var_pallete){
+
+    most_recent_layer <- most_recent_layer + geom_line(data = as.data.frame(subset(inner_set$data, curve == "wealth"))
+                                                       , aes(   x =  x1_star
+                                                                , y =  x2_star
+                                                                )
+                                                       , color = var_pallete$wealth_color
+                                                       , linetype = as.character(var_pallete$wealth_style)
+                                                       , size = as.numeric(var_pallete$wealth_thick)
+                                                       , lineend = "round"
+                                                       , add = TRUE
+                                         ) + geom_point(
+                                                         data = inner_set$sig_values
+                                                         , aes(  x = x1_star
+                                                                 , y = x2_star
+                                                                 )
+                                                         , size = as.numeric(var_pallete$x_star_size)
+                                                         , shape = as.numeric(var_pallete$x_star_style)
+                                                         , color = var_pallete$x_star_color
+                                                         , add = TRUE
+                                         ) + geom_line(
+                                           data = as.data.frame(subset(inner_set$data, curve == "utility"))
+                                           , color = var_pallete$utility_color
+                                           , aes(   x =  x1_star
+                                                    , y =  x2_star
+                                                    )
+                                           , linetype = as.character( var_pallete$utility_style)
+                                           , size = var_pallete$utility_thick
+                                           , add = TRUE
+                                           ) + xlim(0,1000)
+
+    return(most_recent_layer)
+
+  }
+
+  j <- 5
+
+
+
+
+
+  for(j in 1:5){
+    add_layer(  inner_set = new_set[[j]]
+              , var_pallete = extedned_var_scheme[[j]][[1]]
+              )
+  }
+
+  most_recent_layer + xlim(0,1000)
 
 
 
