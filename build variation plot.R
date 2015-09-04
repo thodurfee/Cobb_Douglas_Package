@@ -102,7 +102,7 @@ plot_variation <- function(var_table, var_pallete, base_plot){
 
 
 
-
+##curently, env is missing with no default. must use aes string, aes doesn't work
 
   base <- ggplot(   data = subset(new_set[["e0"]]$data, curve == "wealth" )
                     , aes_string(   x =  goods[1]
